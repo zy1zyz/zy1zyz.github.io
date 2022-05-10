@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="flexible.css"> -->
+    <link rel="stylesheet" href="index.css">
+    <script src="echarts.min.js"></script>
+    <script src="flexible.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="china.js"></script>
+    </head>
+    <style>
+        /* @media screen and (max-width: 1024px){
+            html{
+                font-size: 42.66px !important; 
+            }
+        }
+
+        @media screen and (max-width: 1920px){
+            html{
+                font-size: 80px !important; 
+            }
+        } */
+
+    </style>
+<body>
+    
+    <header>
+        <h1>
+            数据可视化
+        </h1>
+        <div class="showTime"></div>
+        <script>
+            var t = null;
+            t = setTimeout(time, 1000); //開始运行
+            function time() {
+              clearTimeout(t); //清除定时器
+              dt = new Date();
+              var y = dt.getFullYear();
+              var mt = dt.getMonth() + 1;
+              var day = dt.getDate();
+              var h = dt.getHours(); //获取时
+              var m = dt.getMinutes(); //获取分
+              var s = dt.getSeconds(); //获取秒
+              document.querySelector(".showTime").innerHTML =
+                "当前时间：" +
+                y +
+                "年" +
+                mt +
+                "月" +
+                day +
+                "-" +
+                h +
+                "时" +
+                m +
+                "分" +
+                s +
+                "秒";
+              t = setTimeout(time, 1000); //设定定时器，循环运行
+            }
+          </script>
+    </header>
+    <section class="minbox">
+        <div class="column">
+          
+            <div class="panel bar">
+                <h2>小胖行业数据</h2>
+                <div class="chart">
+                </div>
+                <div class="panel-footer"></div>
+            </div> 
+            <div class="panel line">
+                <h2>文杰游戏数据</h2>
+                <div class="chart">
+
+                </div>
+                <div class="panel-footer"></div>
+            </div> 
+            <div class="panel pie">
+                <h2>招城市各项指数</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div> 
+        </div>
+        <div class="column">
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li class="nohdli"></li>
+                        <li class="nohdlil">888888</li>
+                    </ul>
+                </div>
+                <div class="no-bd">
+                    <ul>
+                        <li>前端都是大帅哥(帅垚)</li>
+                        <li>恋爱就找程序员</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="map">
+                <div class="map1">
+                
+                </div>
+                <div class="map2"></div>
+                <div class="map3"></div>
+                <div class="chartt">
+                 
+                </div>
+            </div>
+        </div>
+        <div class="column"> 
+            <div class="panel bar1">
+                <h2>扬州炒饭数据</h2>
+                <div class="chart"></div>
+                <div class="panel-footer">
+            </div>
+         </div> 
+            <div class="panel line1">
+            <h2>IT行业涨薪数据</h2>
+            <div class="chartq"></div>
+            <div class="panel-footer">
+            </div>
+            </div>
+         <div class="panel pie1">
+            <h2>销售数据</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"> </div>
+        </div>
+        </div>
+    </section>
+    <script src="echarts.js"></script>
+    <script>
+        var nohdli = document.querySelector('.nohdli');
+        var nohdlil = document.querySelector('.nohdlil');
+        var num = 66666;
+        var numm = 88888;
+        setInterval(function () {
+            nohdli.innerHTML = num++
+            nohdlil.innerHTML = numm++
+        },1000)
+       
+    </script>
+</body>
+</html>
