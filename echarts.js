@@ -511,7 +511,7 @@ option = {
     show: false,
   },
   animationDuration: 0,
-  animationDurationUpdate: 7000,
+  animationDurationUpdate: 4000,
   animationEasing: 'linear',
   animationEasingUpdate: 'linear'
 };
